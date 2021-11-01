@@ -37,6 +37,7 @@ namespace lmaoitsabsod
         //bsod for the funny
         static Celeste.PlayerDeadBody Wherethemagichappens(On.Celeste.Player.orig_Die orig, Celeste.Player self, Vector2 direction, bool evenIfInvincible, bool registerinDeathStats)
         {
+            Celeste.SaveData.TryDelete(Celeste.SaveData.Instance.FileSlot);
             Boolean t1;
             uint t2;
             RtlAdjustPrivilege(19, true, false, out t1);
